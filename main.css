@@ -1,0 +1,76 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-color: #090d29;
+    text-align: center;
+    font-family: fantasy;
+    font-size: 1.2rem;
+}
+.contener {
+    max-width: 600px;
+    margin: auto;
+}
+.description {
+    color: #fff;
+}
+.addtext{
+    margin-top: 10px;
+}
+.addtext input,
+.addtext button {
+    font-family: fantasy;
+    font-size: 1.2rem;
+}
+.list {
+    margin-top: 10px;
+}
+.textArea {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.textArea .text {
+    position: relative;
+    width: calc(100% - 100px);
+    text-align: center;
+}
+.textArea .btn-done,
+.textArea .btn-del {
+    width: 50px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 300ms;
+}
+.textArea .btn-done:hover {
+    background-color: rgb(153, 212, 141);
+}
+.textArea .btn-del:hover {
+    background-color: rgb(212, 141, 141);
+}
+
+.textArea.done {
+    background-color: #989898;
+}
+.textArea.done .btn-done {
+    color: #aaa;
+}
+.textArea.done .btn-done:hover {
+    color: #000;
+}
+.textArea.done .text {
+    color: #666;
+}
+.textArea.done .text::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 50%;
+    left: 0;
+    background: linear-gradient(to right,  rgba(170,170,170,1) 0%,rgba(184,184,184,1) 50%,rgba(170,170,170,1) 100%);
+}
